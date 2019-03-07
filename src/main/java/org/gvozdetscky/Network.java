@@ -4,15 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Main {
-
-    private static final int vodka = 1;
-    private static final int rain = 0;
-    private static final int friend = 1;
-
-    public static void main(String[] args) {
-        System.out.println("Result: " + new Main().predict(vodka, rain, friend));
-    }
+public class Network {
 
     private int activationFunction(double x) {
         if (x >= 0.5)
@@ -21,7 +13,7 @@ public class Main {
             return 0;
     }
 
-    private boolean predict(int vodka, int rain, int friend) {
+    public boolean predict(int vodka, int rain, int friend) {
         List<Integer> inputs = Arrays.asList(vodka, rain, friend);
         List<Double> weightsInputToHidden1 = new ArrayList<Double>();
         weightsInputToHidden1.add(0.25);
