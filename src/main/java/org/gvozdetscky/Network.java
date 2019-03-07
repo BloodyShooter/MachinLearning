@@ -15,23 +15,16 @@ public class Network {
 
     public boolean predict(int vodka, int rain, int friend) {
         List<Integer> inputs = Arrays.asList(vodka, rain, friend);
-        List<Double> weightsInputToHidden1 = new ArrayList<Double>();
-        weightsInputToHidden1.add(0.25);
-        weightsInputToHidden1.add(0.25);
-        weightsInputToHidden1.add(0.);
+        List<Double> weightsInputToHidden1 = Arrays.asList(0.25, 0.25, 0.);
 
-        List<Double> weightsInputToHidden2 = new ArrayList<Double>();
-        weightsInputToHidden2.add(0.5);
-        weightsInputToHidden2.add(-0.4);
-        weightsInputToHidden2.add(0.9);
+        List<Double> weightsInputToHidden2 = Arrays.asList(0.5, -0.4, 0.9);
 
-        List<List<Double>> weightsInputToHidden = new ArrayList<List<Double>>();
-        weightsInputToHidden.add(weightsInputToHidden1);
-        weightsInputToHidden.add(weightsInputToHidden2);
+        List<List<Double>> weightsInputToHidden = Arrays.asList(
+                weightsInputToHidden1,
+                weightsInputToHidden2
+        );
 
-        List<Double> weightsHiddenToOutput = new ArrayList<Double>();
-        weightsHiddenToOutput.add(-1.);
-        weightsHiddenToOutput.add(1.);
+        List<Double> weightsHiddenToOutput = Arrays.asList(-1., 1.);
 
         List<Double> hiddenInput = new ArrayList<>();
         hiddenInput.add(dot(getHiddenInput(inputs, weightsInputToHidden1)));
@@ -39,9 +32,10 @@ public class Network {
 
         System.out.println("hiddenInput: " + hiddenInput);
 
-        List<Integer> hiddenOutput = new ArrayList<>();
-        hiddenOutput.add(activationFunction(hiddenInput.get(0)));
-        hiddenOutput.add(activationFunction(hiddenInput.get(1)));
+        List<Integer> hiddenOutput = Arrays.asList(
+                activationFunction(hiddenInput.get(0)),
+                activationFunction(hiddenInput.get(1))
+        );
 
         System.out.println("hidden output: " + hiddenOutput);
 
@@ -54,7 +48,7 @@ public class Network {
 
     private List<Double> getHiddenInput(List<Integer> inputs, List<Double> weightsInputToHidden1) {
 
-        List<Double> hiddenInput = new ArrayList<Double>();
+        List<Double> hiddenInput = new ArrayList<>();
 
         for (int i = 0; i < inputs.size(); i++) {
             hiddenInput.add(inputs.get(i) * weightsInputToHidden1.get(i));

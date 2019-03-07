@@ -12,7 +12,16 @@ public class NetworkTest {
         int rain = 0;
         int friend = 1;
 
-        System.out.println("Result: " + new Network().predict(vodka, rain, friend));
+        System.out.println(
+                "Водка: " + (vodka == 1 ? "Есть" : "Нет") +
+                " Дождь: " + (rain == 1 ? "Есть" : "Нет") +
+                " Друзья: " + (friend == 1 ? "Есть" : "Нет"));
+
+        boolean predict = new Network().predict(vodka, rain, friend);
+
+        System.out.println("Result: " + predict);
+
+        assertTrue(predict);
     }
 
     @Test
@@ -21,7 +30,18 @@ public class NetworkTest {
         int rain = 1;
         int friend = 0;
 
+        System.out.println(
+                "Водка: " + (vodka == 1 ? "Есть" : "Нет") +
+                        " Дождь: " + (rain == 1 ? "Есть" : "Нет") +
+                        " Друзья: " + (friend == 1 ? "Есть" : "Нет"));
+
         System.out.println("Result: " + new Network().predict(vodka, rain, friend));
+
+        boolean predict = new Network().predict(vodka, rain, friend);
+
+        System.out.println("Result: " + predict);
+
+        assertFalse(predict);
     }
 
     @Test
@@ -30,7 +50,18 @@ public class NetworkTest {
         int rain = 1;
         int friend = 1;
 
+        System.out.println(
+                "Водка: " + (vodka == 1 ? "Есть" : "Нет") +
+                        " Дождь: " + (rain == 1 ? "Есть" : "Нет") +
+                        " Друзья: " + (friend == 1 ? "Есть" : "Нет"));
+
         System.out.println("Result: " + new Network().predict(vodka, rain, friend));
+
+        boolean predict = new Network().predict(vodka, rain, friend);
+
+        System.out.println("Result: " + predict);
+
+        assertTrue(predict);
     }
 
     @Test
@@ -39,7 +70,18 @@ public class NetworkTest {
         int rain = 0;
         int friend = 1;
 
+        System.out.println(
+                "Водка: " + (vodka == 1 ? "Есть" : "Нет") +
+                        " Дождь: " + (rain == 1 ? "Есть" : "Нет") +
+                        " Друзья: " + (friend == 1 ? "Есть" : "Нет"));
+
         System.out.println("Result: " + new Network().predict(vodka, rain, friend));
+
+        boolean predict = new Network().predict(vodka, rain, friend);
+
+        System.out.println("Result: " + predict);
+
+        assertTrue(predict);
     }
 
     @Test
@@ -48,7 +90,18 @@ public class NetworkTest {
         int rain = 0;
         int friend = 0;
 
+        System.out.println(
+                "Водка: " + (vodka == 1 ? "Есть" : "Нет") +
+                        " Дождь: " + (rain == 1 ? "Есть" : "Нет") +
+                        " Друзья: " + (friend == 1 ? "Есть" : "Нет"));
+
         System.out.println("Result: " + new Network().predict(vodka, rain, friend));
+
+        boolean predict = new Network().predict(vodka, rain, friend);
+
+        System.out.println("Result: " + predict);
+
+        assertTrue(predict);
     }
 
     @Test
@@ -57,7 +110,18 @@ public class NetworkTest {
         int rain = 1;
         int friend = 0;
 
+        System.out.println(
+                "Водка: " + (vodka == 1 ? "Есть" : "Нет") +
+                        " Дождь: " + (rain == 1 ? "Есть" : "Нет") +
+                        " Друзья: " + (friend == 1 ? "Есть" : "Нет"));
+
         System.out.println("Result: " + new Network().predict(vodka, rain, friend));
+
+        boolean predict = new Network().predict(vodka, rain, friend);
+
+        System.out.println("Result: " + predict);
+
+        assertFalse(predict);
     }
 
     @Test
@@ -66,7 +130,18 @@ public class NetworkTest {
         int rain = 0;
         int friend = 0;
 
+        System.out.println(
+                "Водка: " + (vodka == 1 ? "Есть" : "Нет") +
+                        " Дождь: " + (rain == 1 ? "Есть" : "Нет") +
+                        " Друзья: " + (friend == 1 ? "Есть" : "Нет"));
+
         System.out.println("Result: " + new Network().predict(vodka, rain, friend));
+
+        boolean predict = new Network().predict(vodka, rain, friend);
+
+        System.out.println("Result: " + predict);
+
+        assertFalse(predict);
     }
 
     @Test
@@ -75,7 +150,18 @@ public class NetworkTest {
         int rain = 1;
         int friend = 1;
 
+        System.out.println(
+                "Водка: " + (vodka == 1 ? "Есть" : "Нет") +
+                        " Дождь: " + (rain == 1 ? "Есть" : "Нет") +
+                        " Друзья: " + (friend == 1 ? "Есть" : "Нет"));
+
         System.out.println("Result: " + new Network().predict(vodka, rain, friend));
+
+        boolean predict = new Network().predict(vodka, rain, friend);
+
+        System.out.println("Result: " + predict);
+
+        assertFalse(predict);
     }
 
 }
